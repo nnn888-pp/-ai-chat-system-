@@ -65,6 +65,12 @@ class QwenLoRAProvider(BaseProvider):
         self.dir_path = dir_path
         self.name = dir_path.name
         self.description = "Qwen 本地模型"
+        try:
+            raw = json.loads((dir_path / "model_config.json").read_text(encoding="utf-8"))
+            self.name = raw.get("name", self.name)
+            self.description = raw.get("description") or self.description
+        except Exception:
+            pass
         self._lock = threading.Lock()
         self._model = None
         self._tokenizer = None

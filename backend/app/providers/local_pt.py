@@ -66,8 +66,14 @@ class LocalPTProvider(BaseProvider):
     def __init__(self, key: str, dir_path: Path):
         self.key = key
         self.dir_path = dir_path
-        self.name = dir_path.name  # 先用目录名，加载后用 model_config.json 覆盖
+        self.name = dir_path.name
         self.description = f"本地模型：{dir_path.name}"
+        try:
+            raw = json.loads((dir_path / "model_config.json").read_text(encoding="utf-8"))
+            self.name = raw.get("name", self.name)
+            self.description = raw.get("description") or self.description
+        except Exception:
+            pass
         self._lock = threading.Lock()
         self._tokenizer: Tokenizer | None = None
         self._model = None
