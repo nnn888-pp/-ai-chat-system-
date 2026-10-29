@@ -1,0 +1,12 @@
+{
+  "kind": "local_custom",
+  "name": "小GPT预训练(三国演义+西游记)",
+  "description": "4.46MB 中文语料重训的预训练模型",
+  "ckpt_path": "../../training/checkpoints_v2/step_1894.pth",
+  "tokenizer_path": "../../training/tokenizer/tokenizer.json",
+  "prompt_template": "问：{question}\n答：",
+  "max_new_tokens": 40,
+  "top_k": 10,
+  "temperature": 0.8,
+  "device": "cpu"
+}

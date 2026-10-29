@@ -1,0 +1,12 @@
+{
+  "kind": "local_custom",
+  "name": "小GPT全量SFT",
+  "description": "45条问答监督微调",
+  "ckpt_path": "../../training/checkpoints_sft_v2/step_18.pth",
+  "tokenizer_path": "../../training/tokenizer/tokenizer.json",
+  "prompt_template": "问：{question}\n答：",
+  "max_new_tokens": 40,
+  "top_k": 10,
+  "temperature": 0.8,
+  "device": "cpu"
+}

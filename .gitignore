@@ -1,0 +1,41 @@
+# 环境与密钥（不入库）
+.env
+*.env.local
+backend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# 前端
+node_modules/
+frontend/dist/
+*.local
+
+# 数据库与运行产物
+*.db
+*.sqlite
+*.sqlite3
+*.log
+logs/
+
+# 模型权重与训练产物（体积大，按需本地放置）
+models_store/models/
+*.incomplete
+models_store/**/*.safetensors
+models_store/**/*.bin
+models_store/**/*.pt
+models_store/**/*.pth
+models_store/**/*.gguf
+models_store/**/tokenizer.json
+training/checkpoints*/
+training/data/raw/
+train_runs/
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

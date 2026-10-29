@@ -1,0 +1,13 @@
+{
+  "kind": "local_custom",
+  "name": "小GPT LoRA SFT (孙悟空)",
+  "description": "LoRA rank=8，LoRA SFT 30条孙悟空语料",
+  "ckpt_path": "../../training/checkpoints_v2/step_1894.pth",
+  "tokenizer_path": "../../training/tokenizer/tokenizer.json",
+  "lora_path": "../../training/checkpoints_lora_v2/lora_rank8.pth",
+  "prompt_template": "问：{question}\n答：",
+  "max_new_tokens": 40,
+  "top_k": 10,
+  "temperature": 0.8,
+  "device": "cpu"
+}

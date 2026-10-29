@@ -1,0 +1,12 @@
+{
+  "kind": "hf_qwen",
+  "name": "Qwen2.5-1.5B（基座）",
+  "description": "阿里通义千问 1.5B 基座模型，裸文本续写模式",
+  "base_model_path": "../models/Qwen--Qwen2.5-1.5B/snapshots/master",
+  "lora_path": null,
+  "device": "cpu",
+  "max_new_tokens": 200,
+  "temperature": 0.7,
+  "top_p": 0.9,
+  "prompt_format": "raw_completion"
+}

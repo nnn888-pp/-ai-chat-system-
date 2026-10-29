@@ -1,0 +1,14 @@
+{
+  "kind": "hf_qwen_lora",
+  "name": "Qwen2.5-1.5B + 孙悟空 LoRA",
+  "description": "魔塔社区训练的孙悟空风格 LoRA（基座续写式，贪婪解码保证稳定）",
+  "base_model_path": "../models/Qwen--Qwen2.5-1.5B/snapshots/master",
+  "lora_path": "../qwen-lora-wukong",
+  "device": "cpu",
+  "max_new_tokens": 160,
+  "temperature": 0.0,
+  "top_p": 0.9,
+  "lora_scale": 1.0,
+  "prompt_format": "raw_completion",
+  "prepend_text": ""
+}
