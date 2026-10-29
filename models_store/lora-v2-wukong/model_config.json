@@ -1,6 +1,6 @@
 {
   "kind": "local_custom",
-  "name": "小GPT LoRA SFT (孙悟空)",
+  "name": "小GPT LoRA SFT (孙悟空) (LoRA)",
   "description": "LoRA rank=8，LoRA SFT 30条孙悟空语料",
   "ckpt_path": "../../training/checkpoints_v2/step_1894.pth",
   "tokenizer_path": "../../training/tokenizer/tokenizer.json",
